@@ -17,8 +17,10 @@
 package com.alibaba.boot.dubbo.demo.consumer.bootstrap;
 
 import com.alibaba.boot.dubbo.demo.consumer.controller.DemoConsumerController;
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * Dubbo Consumer Demo
@@ -28,6 +30,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0.0
  */
 @SpringBootApplication(scanBasePackages = "com.alibaba.boot.dubbo.demo.consumer.controller")
+@EnableDubbo
+@ImportResource(locations = { "classpath:dubbo/dubbo.xml" })
 public class DubboConsumerDemo {
 
     public static void main(String[] args) {

@@ -21,7 +21,7 @@ package com.alibaba.boot.dubbo.demo.consumer;/*
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.0
  */
-public interface DemoService {
+public interface DemoService2 {
 
     String sayHello(String name);
 
